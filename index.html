@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyMacro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="theme-color" content="#111111">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MyMacro">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🥗 MyMacro</h1>
+
+<p class="subtitle">
+Ваш персональный калькулятор КБЖУ
+</p>
+
+<label>Пол</label>
+
+<select id="sex">
+<option value="female">Женщина</option>
+<option value="male">Мужчина</option>
+</select>
+
+<label>Возраст</label>
+<input id="age" type="number" placeholder="44">
+
+<label>Рост (см)</label>
+<input id="height" type="number" placeholder="166">
+
+<label>Вес (кг)</label>
+<input id="weight" type="number" placeholder="71">
+
+<label>Активность</label>
+
+<select id="activity">
+
+<option value="1">Минимальная</option>
+
+<option value="1.12">
+Небольшая
+</option>
+
+<option value="1.27" selected>
+Средняя
+</option>
+
+<option value="1.45">
+Высокая
+</option>
+
+</select>
+
+<label>Цель</label>
+
+<select id="goal">
+
+<option value="-750">
+Экстремальное похудение
+</option>
+
+<option value="-500" selected>
+Похудение
+</option>
+
+<option value="-250">
+Лёгкое похудение
+</option>
+
+<option value="0">
+Поддержание
+</option>
+
+<option value="250">
+Набор массы
+</option>
+
+<option value="500">
+Активный набор
+</option>
+
+</select>
+
+<label>Количество приёмов пищи</label>
+
+<select id="meals">
+
+<option>3</option>
+<option selected>4</option>
+<option>5</option>
+<option>6</option>
+
+</select>
+
+<button onclick="calc()">
+
+Рассчитать КБЖУ
+
+</button>
+
+<div id="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
