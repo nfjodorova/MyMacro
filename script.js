@@ -30,7 +30,7 @@ const fat = Math.round(calories * 0.30 / 9);
 const carbs = Math.round((calories - protein * 4 - fat * 9) / 4);
 const water = (weight * 35 / 1000).toFixed(1);
 const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
-
+saveData();
 document.getElementById("result").innerHTML = `
 <div class="card"><span>🔥 Калории</span><span class="value">${calories}</span></div>
 <div class="card"><span>🥩 Белки</span><span class="value">${protein} г</span></div>
@@ -41,3 +41,37 @@ document.getElementById("result").innerHTML = `
 `;
 
 }
+function saveData() {
+    localStorage.setItem("sex", document.getElementById("sex").value);
+    localStorage.setItem("age", document.getElementById("age").value);
+    localStorage.setItem("height", document.getElementById("height").value);
+    localStorage.setItem("weight", document.getElementById("weight").value);
+    localStorage.setItem("activity", document.getElementById("activity").value);
+    localStorage.setItem("goal", document.getElementById("goal").value);
+    localStorage.setItem("meals", document.getElementById("meals").value);
+}
+
+function loadData() {
+    if (localStorage.getItem("sex"))
+        document.getElementById("sex").value = localStorage.getItem("sex");
+
+    if (localStorage.getItem("age"))
+        document.getElementById("age").value = localStorage.getItem("age");
+
+    if (localStorage.getItem("height"))
+        document.getElementById("height").value = localStorage.getItem("height");
+
+    if (localStorage.getItem("weight"))
+        document.getElementById("weight").value = localStorage.getItem("weight");
+
+    if (localStorage.getItem("activity"))
+        document.getElementById("activity").value = localStorage.getItem("activity");
+
+    if (localStorage.getItem("goal"))
+        document.getElementById("goal").value = localStorage.getItem("goal");
+
+    if (localStorage.getItem("meals"))
+        document.getElementById("meals").value = localStorage.getItem("meals");
+}
+
+window.onload = loadData;
