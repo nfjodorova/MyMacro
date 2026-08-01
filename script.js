@@ -75,3 +75,16 @@ function loadData() {
 }
 
 window.onload = loadData;
+function clearData(){
+
+localStorage.clear();
+
+document.getElementById("age").value="";
+document.getElementById("height").value="";
+document.getElementById("weight").value="";
+
+document.getElementById("result").innerHTML="";
+
+document.getElementById("clearBtn").style.display="none";
+
+}
