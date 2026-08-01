@@ -31,7 +31,7 @@ const carbs = Math.round((calories - protein * 4 - fat * 9) / 4);
 const water = (weight * 35 / 1000).toFixed(1);
 const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
 saveData();
-document.getElementById("result").innerHTML = `
+document.getElementById("clearBtn").style.display = "block";document.getElementById("result").innerHTML = `
 <div class="card"><span>🔥 Калории</span><span class="value">${calories}</span></div>
 <div class="card"><span>🥩 Белки</span><span class="value">${protein} г</span></div>
 <div class="card"><span>🥑 Жиры</span><span class="value">${fat} г</span></div>
